@@ -61,7 +61,7 @@ table {
 }
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 @media screen and (min-width:428px){
-    p {
+    p, figcaption {
         font-family: var(--fonts);
     }
     h1, h2, h3 {
@@ -76,12 +76,20 @@ table {
         font-size: 1.75rem;
     }
 
-    h3, p{
+    h3, p, figcaption{
         font-size: 1.25rem;
     }
 
+    header{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: var(--Green);
+        color: var(--White);
+    }
+
     nav{
-        justify-content: right;
+        grid-column: 2/3;
+        grid-row: 1/2;
     }
 
     nav a{
@@ -96,11 +104,6 @@ table {
     nav a:hover{
         color: var(--Orange);
         background-color: var(--White);
-    }
-
-    header{
-        background-color: var(--Green);
-        color: var(--White);
     }
 
     main {

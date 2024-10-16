@@ -110,6 +110,14 @@ table {
         grid-template-columns: 1fr;
     }
 
+    #fruit, #vegetables{
+        display: grid;
+    }
+
+    section section{
+        text-align: center;
+    }
+
     aside{
         background-color: var(--Green);
         color: var(--White);
@@ -134,5 +142,10 @@ table {
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width:1440px){
-    
+    main{
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #fruit,#vegetables{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

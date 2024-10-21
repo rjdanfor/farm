@@ -1,3 +1,4 @@
+/* ------------------------- CSS by RJ -------------------------------------- */
 /* -------------------- IMPORTED FONTS -------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 /*-------------------- CSS RESET ---------------------------------------------------*/
@@ -51,16 +52,24 @@ table {
 }
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 :root {
-    --Green: #06A816;
-    --Orange: #E75D02;
-    --Black: #000000;
-    --White: #ffffff;
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --white: #ffffff;
 
     --fonts: "Habibi";
     --title-fonts: "Irish Grover";
 }
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 @media screen and (min-width:428px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header nav"
+        "main main"
+        "aside aside"
+        "footer footer";
+    }
     p, figcaption {
         font-family: var(--fonts);
     }
@@ -80,57 +89,67 @@ table {
         font-size: 1.25rem;
     }
 
-    header{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        background-color: var(--Green);
-        color: var(--White);
+    header {
+        grid-area: header;
+        background-color: var(--green);
+        color: var(--white);
     }
 
-    nav{
-        grid-column: 2/3;
-        grid-row: 1/2;
+    nav {
+        grid-area: nav;  
+        background-color: var(--green);
+    }
+
+    nav ul {
+        display: flex;
     }
 
     nav a{
-        background-color: var(--Orange);
-        color: var(--White);
+        background-color: var(--orange);
+        color: var(--white);
         padding: 0 50px;
         border-radius: 0.5rem;
         text-decoration: none;
-        border-color: var(--White);
     }
 
     nav a:hover{
-        color: var(--Orange);
-        background-color: var(--White);
+        color: var(--orange);
+        background-color: var(--white);
     }
 
     main {
-        background-color: var(--White);
-        color: var(--Black);
+        grid-area: main;
+        background-color: var(--white);
+        color: var(--black);
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
     }
 
     #fruit, #vegetables{
         display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    section section{
+    #fruit h2, #fruit p, #fruit h3, #vegetables h2, #vegetables p, #vegetables h3{
+        grid-column: 1/5;
+    }
+
+    #fruit h3, #vegetables h3 {
         text-align: center;
     }
 
     aside{
-        background-color: var(--Green);
-        color: var(--White);
+        grid-area: aside;
+        background-color: var(--green);
+        color: var(--white);
         display: grid;
-        columns: 1;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     footer{
-        background-color: var(--White);
-        color: var(--Green);
+        grid-area: footer;
+        background-color: var(--white);
+        color: var(--green);
         margin: auto;
         text-align: center;
     }

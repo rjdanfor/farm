@@ -236,7 +236,9 @@ table {
     }
 
     nav ul {
-        justify-content: flex-end;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+        gap: 0;
     }
 
     #fruit, #vegetables{

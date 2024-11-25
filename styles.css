@@ -227,7 +227,6 @@ table {
         grid-template-areas: 
         "header nav"
         "main main"
-        "aside aside"
         "footer footer";
     }
 

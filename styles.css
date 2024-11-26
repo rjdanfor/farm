@@ -150,7 +150,7 @@ table {
         grid-template-rows: repeat(2, 1fr);
     }
 
-    #fruit, #vegetables{
+    #fruit section:last-child, #vegetables section:last-child{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -212,7 +212,7 @@ table {
         text-align: left;
     }
 
-    #fruit, #vegetables{
+    #fruit section:last-child, #vegetables section:last-child{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -240,7 +240,7 @@ table {
         gap: 0;
     }
 
-    #fruit, #vegetables{
+    #fruit section:last-child, #vegetables section:last-child{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -251,7 +251,7 @@ table {
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width:1440px){
-    #fruit,#vegetables{
+    #fruit section:last-child, #vegetables section:last-child{
         grid-template-columns: repeat(4, 1fr);
     }
     #fr_head, #fruit h3, #veg_head, #vegetables h3{

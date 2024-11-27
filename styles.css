@@ -61,7 +61,6 @@ table {
     --title-fonts: "Irish Grover";
 }
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
-@media screen and (min-width:428px){
     body{
         display: grid;
         grid-template-areas: 
@@ -69,6 +68,7 @@ table {
         "nav"
         "main"
         "footer";
+        min-width:428px
     }
     p, figcaption {
         font-family: var(--fonts);
@@ -205,7 +205,21 @@ table {
         margin: auto;
         text-align: center;
     }
-}
+
+    dl{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 5px;
+    }
+
+    dt{
+        grid-column: 1;
+        text-align: right;
+    }
+
+    dd{
+        grid-column: 2;
+    }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 @media screen and (min-width:834px){
     header {
